@@ -12,9 +12,11 @@ int main(void)
     // decleared words as 1 because there are one more words than spaces and I used spaces to determine the words
     int words= 1;
     int sentences = 0;
+    //getting string length
+    int n = n = strlen(text); 
 
     // check if the char in the array is an alphabet
-     for (int i = 0, n = strlen(text); i < n; i++)
+     for (int i = 0; i < n; i++)
      {
          if (text[i]  >= 'A' && text[i] <= 'z' )
          {
@@ -22,17 +24,17 @@ int main(void)
          }
      }
 
-     // check if the char in the array is a space
-     for (int i = 0, n = strlen(text); i < n; i++)
+     // adding words 
+     for (int i = 0; i < n; i++)
      {
-         if ((isalpha(text[i]) || ispunct(text[i])) && isspace(text[i+1]))
+         if (text[i]==' ')
          {
            words++;
          }
      }
 
      //check if the char in the array is a punctuation mark
-    for (int i = 0, n = strlen(text); i < n; i++)
+    for (int i = 0; i < n; i++)
      {
          if (text[i] == '.' || text[i]== '!' || text[i]== '?')
          {
